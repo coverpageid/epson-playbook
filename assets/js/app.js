@@ -23,7 +23,7 @@
 
   const MODULES = [
     { id: "wizard", short: "Rekomendasi", label: "Asisten Rekomendasi", desc: "Pilih profil pelanggan & kebutuhan untuk mendapatkan rekomendasi produk Terbaik, Ideal, dan Upsell dalam hitungan detik." },
-    { id: "ecotank", short: "EcoTank", label: "Playbook Printer EcoTank", desc: "Rumus membaca kode model 49 printer EcoTank, matriks Upselling Ladder, dan panduan generasi baru 2026." },
+    { id: "ecotank", short: "EcoTank", label: "Playbook Printer EcoTank", desc: "Rumus membaca kode model 47 printer EcoTank aktif, matriks Upselling Ladder, dan panduan generasi baru 2026." },
     { id: "ink", short: "Kode Tinta", label: "Panduan Kode Tinta", desc: "Pencarian cepat kompatibilitas botol tinta Epson (664, 003, 001, 008, 057, 005), formula Dye vs Pigmen, dan sertifikat TKDN." },
     { id: "projector", short: "Proyektor", label: "Playbook Proyektor 3LCD", desc: "Panduan 21 proyektor Corporate & Education: kalkulator ukuran ruangan, kode seri EB-, dan keunggulan 3LCD vs DLP." },
     { id: "tkdn", short: "Strategi TKDN", label: "Strategi Tender TKDN & PDN", desc: "Aturan pengadaan pemerintah (PP 29/2018), Cheat Sheet pemenang tender per kategori, & strategi mengalahkan fotokopi laser." },
@@ -36,8 +36,8 @@
     "swasta:printer:home": {
       title: "Printer Rumah, Pelajar & Keluarga (Cetak Harian Hemat)",
       tiers: [
-        { tag: "Ekonomis (Entry)", color: "#6e6e73", model: "EcoTank L1310 / L3210", meta: "Tinta 003 · USB 2.0 · 4.500 hal. hitam / 7.500 warna", pitch: "Solusi paling terjangkau untuk cetak saja (L1310 Baru 2026) atau All-in-One Print/Scan/Copy (L3210).", url: `${URL_ECO}#/compare/L1310,L3210` },
-        { tag: "Pilihan Ideal (Best Seller)", color: "#0a84ff", best: true, model: "EcoTank L3250 / L3351", meta: "Tinta 003 · Wi-Fi & Wi-Fi Direct · Epson Smart Panel", pitch: "Bisa cetak & scan langsung dari HP Android/iPhone tanpa menyalakan laptop. L3351 hadir dengan bodi baru 2026 yang lebih ringkas.", url: `${URL_ECO}#/compare/L3250,L3351` },
+        { tag: "Ekonomis (Entry)", color: "#6e6e73", model: "EcoTank L1310 / L3211 / L3311", meta: "Tinta 003 · USB 2.0 · 4.500 hal. hitam / 7.500 warna", pitch: "Solusi paling terjangkau untuk cetak saja (L1310 Baru 2026) atau All-in-One Print/Scan/Copy (L3211 TKDN 66,45% / L3311 Baru 2026).", url: `${URL_ECO}#/compare/L1310,L3211,L3311` },
+        { tag: "Pilihan Ideal (Best Seller)", color: "#0a84ff", best: true, model: "EcoTank L3251 / L3351", meta: "Tinta 003 · Wi-Fi & Wi-Fi Direct · Epson Smart Panel", pitch: "Bisa cetak & scan langsung dari HP Android/iPhone tanpa menyalakan laptop. L3251 memiliki TKDN 75,28%, sedangkan L3351 hadir dengan bodi baru 2026.", url: `${URL_ECO}#/compare/L3251,L3351` },
         { tag: "Upsell / Pro", color: "#30d158", model: "EcoTank L4360", meta: "Tinta 001 (Hitam Pigmen) · Auto Duplex · Layar LCD", pitch: "Alasan Upsell: Cetak bolak-balik otomatis menghemat kertas 50% dan tinta hitam pigmennya tahan air seperti hasil cetak laser!", url: `${URL_ECO}#/p/L4360` },
       ]
     },
@@ -238,7 +238,7 @@
     return `
       <div class="portal-grid">
         <a class="portal-item" href="${URL_ECO}" target="_blank" rel="noopener">
-          <span class="portal-badge" style="background:linear-gradient(135deg,#0a84ff,#0051a8)">49 Model Printer</span>
+          <span class="portal-badge" style="background:linear-gradient(135deg,#0a84ff,#0051a8)">47 Model Printer</span>
           <h4>Katalog Digital Epson EcoTank</h4>
           <p>Seluruh printer Ink Tank rumah, kantor, foto 6 warna, monokrom, hingga A3+ lengkap dengan filter kode tinta & perbandingan.</p>
           <span class="portal-cta">Buka Katalog EcoTank →</span>
@@ -279,7 +279,7 @@
 
   function renderEcoTank() {
     const parts = decodeEcoTank(state.decModel);
-    const presets = ["L3210", "L3251", "L3351", "L4360", "L5391", "L6460", "L15150", "L18050", "M2050", "M15140"];
+    const presets = ["L3211", "L3251", "L3311", "L3351", "L4360", "L5391", "L6460", "L15150", "L18050", "M15140"];
     return `
       <div class="pb-card">
         <h3>🔍 Dekoder Interaktif Kode Model EcoTank</h3>
@@ -296,6 +296,25 @@
       </div>
 
       <div class="pb-card">
+        <h3>⚠️ Status Discontinue &amp; Belum TKDN/PDN (L120, L1210, L3210, L3250)</h3>
+        <p class="sub">Tipe <b>L120, L1210, L3210, dan L3250</b> sudah <b>Discontinue</b> serta <b>belum berstatus TKDN/PDN</b>. Arahkan permintaan pelanggan ke pengganti resminya:</p>
+        <div class="tier-grid">
+          <div class="tier-box best">
+            <span class="tier-tag" style="background:#d7001522;color:#d70015">Pengganti Resmi Bersertifikat TKDN</span>
+            <h4>EcoTank L3211 (66,45%) &amp; L3251 (75,28%)</h4>
+            <div class="tier-meta">Sertifikat: 6109/SJ-IND.8/E-TKDN/5/2025 · Tinta 003</div>
+            <p class="pitch">Pengganti langsung L3210 (USB → <b>L3211</b>) dan L3250 (Wi-Fi → <b>L3251</b>) yang sudah resmi bersertifikat TKDN tertinggi.</p>
+          </div>
+          <div class="tier-box best">
+            <span class="tier-tag" style="background:#0a84ff22;color:#0a84ff">Pengganti Generasi Baru 2026 &amp; Single-Function</span>
+            <h4>L121 · L1310 · L3311 · L3351</h4>
+            <div class="tier-meta">L121 (Pengganti L120) · L1310 (Pengganti L1210) · L3311/L3351 (Generasi Baru)</div>
+            <p class="pitch">Untuk kebutuhan cetak saja arahkan L120 ke <b>L121</b> dan L1210 ke <b>L1310 / L1250</b>; untuk All-in-One ritel arahkan ke <b>L3311 / L3351</b>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-card">
         <h3>📈 Matriks Upselling Ladder Printer EcoTank</h3>
         <p class="sub">Gunakan tangga upselling ini untuk mengarahkan pelanggan ke seri dengan nilai tambah yang lebih menguntungkan:</p>
         <div class="pb-table-wrap">
@@ -303,7 +322,7 @@
             <thead>
               <tr>
                 <th>Segmen Pelanggan</th>
-                <th>Model Awal (Yang Ditanya)</th>
+                <th>Model Awal (Entry)</th>
                 <th>Target Upsell 1 (Best Value)</th>
                 <th>Target Upsell 2 (Pro / Bisnis)</th>
                 <th>Kalimat Kunci Upselling</th>
@@ -312,14 +331,14 @@
             <tbody>
               <tr>
                 <td><b>Rumah & Pelajar</b></td>
-                <td><code>L121</code> / <code>L3210</code></td>
-                <td><b><code>L3250</code> / <code>L3351</code></b> (Wi-Fi)</td>
+                <td><code>L121</code> / <code>L1310</code> / <code>L3211</code> / <code>L3311</code></td>
+                <td><b><code>L3251</code> (TKDN) / <code>L3351</code></b> (Wi-Fi)</td>
                 <td><b><code>L4360</code></b> (Duplex + LCD + Hitam Pigmen)</td>
-                <td>"Dengan L3250/L3351 bisa cetak langsung dari WhatsApp di HP. Kalau naik ke L4360, sudah bisa bolak-balik otomatis & teks hitamnya tahan air."</td>
+                <td>"Dengan L3251/L3351 bisa cetak langsung dari HP via Wi-Fi. Kalau naik ke L4360, sudah bisa bolak-balik otomatis & teks hitamnya tahan air."</td>
               </tr>
               <tr>
                 <td><b>Admin / Kantor Kecil</b></td>
-                <td><code>L3250</code></td>
+                <td><code>L3251</code> / <code>L3351</code></td>
                 <td><b><code>L5290</code> / <code>L5391</code></b> (+ADF & LAN)</td>
                 <td><b><code>L6260</code> / <code>L6370</code></b> (Duplex Cepat + Baki 250 lbr)</td>
                 <td>"Kalau sering scan/fotokopi berkas banyak lembar, wajib ambil yang ada ADF (L5391/L6370) supaya tidak perlu buka-tutup kaca satu per satu."</td>
@@ -362,8 +381,8 @@
 
   function renderInk() {
     const inks = [
-      { code: "003", type: "Dye 4 Warna (CMYK) · Botol Anti-Tumpah Key-Lock", yield: "4.500 hal. Hitam / 7.500 hal. Warna (65 ml)", tkdn: "Bersertifikat TKDN Mei 2026: Bk 25,65% (4000) · C 25,25% (4004) · M 25,72% (4005) · Y 25,54% (4006)", models: "L11050, L1250, L1256, L1310, L1350, L3210, L3211, L3216, L3250, L3251, L3256, L3311, L3316, L3351, L3356, L3550, L3556, L5290, L5296, L5391, L5590" },
-      { code: "664", type: "Dye 4 Warna (CMYK) · Botol Standar 70 ml", yield: "4.000 hal. Hitam / 6.500 hal. Warna (70 ml)", tkdn: "Bersertifikat TKDN Mei 2026: T6641 Bk 25,23% (3999) · T6642 C 25,25% (4003) · T6643 M 25,27% (4001) · T6644 Y 25,20% (4002)", models: "L121 (serta model lama L110/L120/L210/L220/L300/L310/L350/L360/L365/L380/L385/L485/L565/L1300)" },
+      { code: "003", type: "Dye 4 Warna (CMYK) · Botol Anti-Tumpah Key-Lock", yield: "4.500 hal. Hitam / 7.500 hal. Warna (65 ml)", tkdn: "Bersertifikat TKDN Mei 2026: Bk 25,65% (4000) · C 25,25% (4004) · M 25,72% (4005) · Y 25,54% (4006)", models: "L11050, L1250, L1256, L1310, L1350, L3211, L3216, L3251, L3256, L3311, L3316, L3351, L3356, L3550, L3556, L5290, L5296, L5391, L5590" },
+      { code: "664", type: "Dye 4 Warna (CMYK) · Botol Standar 70 ml", yield: "4.000 hal. Hitam / 6.500 hal. Warna (70 ml)", tkdn: "Bersertifikat TKDN Mei 2026: T6641 Bk 25,23% (3999) · T6642 C 25,25% (4003) · T6643 M 25,27% (4001) · T6644 Y 25,20% (4002)", models: "L121" },
       { code: "001", type: "Hitam Pigmen (127 ml) + Warna Dye CMY (70 ml)", yield: "7.500 hal. Hitam / 6.000 hal. Warna", tkdn: "—", models: "L4360, L6260, L6370, L6390, L14150" },
       { code: "008", type: "Full Pigmen 4 Warna DURABrite ET (Tahan Air & Stabilo)", yield: "7.500 hal. Hitam (127 ml) / 6.000 hal. Warna (70 ml)", tkdn: "—", models: "L6460, L6490, L6550, L6580, L15150, L15160, L15180" },
       { code: "057", type: "Dye Foto 6 Warna (Bk, C, M, Y, Light Cyan, Light Magenta)", yield: "Hingga 2.100 foto 4R (70 ml/botol)", tkdn: "—", models: "L8050, L8100, L18050" },
@@ -656,8 +675,8 @@
         a: "Epson menggunakan printhead permanen <b>Micro Piezo / PrecisionCore</b> yang bekerja secara mekanis (tanpa memanaskan tinta sampai mendidih seperti thermal inkjet merek lain). Selama menggunakan tinta orisinal Epson dan dinyalakan secara berkala, printhead sangat awet dan dilindungi <b>garansi resmi hingga 2 tahun (+1 tahun via MyEpson Portal) atau 30.000–50.000 halaman</b>."
       },
       {
-        q: "4. \"Instansi kami mau beli L3210/L3250 di e-Katalog, kenapa disarankan L3211/L3251?\"",
-        a: "<b>L3211 (TKDN+BMP 66,45%) dan L3251 (TKDN+BMP 75,28%)</b> adalah SKU resmi bersertifikat TKDN Kemenperin RI (`6109/SJ-IND.8/E-TKDN/5/2025`) yang dibuat khusus untuk memenuhi kewajiban belanja Produk Dalam Negeri pemerintah dengan spesifikasi teknis dan botol tinta `003` yang sama."
+        q: "4. \"Pelanggan mencari L3210, L3250, L120, atau L1210 untuk pengadaan / pembelian baru?\"",
+        a: "<b>Tipe L3210, L3250, L120, dan L1210 sudah Discontinue serta belum berstatus TKDN/PDN.</b> Arahkan langsung ke pengganti resminya: <b>L3211 (TKDN+BMP 66,45%)</b> dan <b>L3251 (TKDN+BMP 75,28%)</b> dengan Sertifikat <code>6109/SJ-IND.8/E-TKDN/5/2025</code>, atau model generasi baru 2026 <b>L3311 / L3351</b> serta <b>L121 / L1310</b> untuk cetak saja."
       },
       {
         q: "5. \"Klien mencari Proyektor EB-X500 untuk pengadaan sekolah/dinas, tapi barangnya kosong?\"",
