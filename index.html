@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Epson Sales &amp; Product Playbook — Panduan Interaktif EcoTank, Proyektor &amp; TKDN</title>
+  <meta name="description" content="Playbook interaktif penjualan &amp; pengadaan produk Epson Indonesia: Asisten Rekomendasi Cepat, Dekoder Kode Model, Upselling Ladder EcoTank (49 Model), Proyektor 3LCD (21 Model), serta Strategi Tender TKDN &amp; PDN (79 Produk)." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23003399'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' fill='white' font-family='-apple-system,BlinkMacSystemFont,sans-serif' font-weight='800' font-size='18'%3EPLAY%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- macOS menu bar -->
+  <header class="menubar" role="banner">
+    <div class="menubar-left">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5-6-3 6-3 6 3-6 3zm0 2.5-10-5v2l10 5 10-5v-2l-10 5zm0 4-10-5v2l10 5 10-5v-2l-10 5z"/></svg>
+      </span>
+      <strong>Epson Playbook</strong>
+      <nav class="menu-items" aria-label="Menu">
+        <button data-sec="wizard">Rekomendasi</button>
+        <button data-sec="ecotank">EcoTank</button>
+        <button data-sec="ink">Kode Tinta</button>
+        <button data-sec="projector">Proyektor</button>
+        <button data-sec="tkdn">Strategi TKDN</button>
+        <button data-sec="certs">No. Sertifikat</button>
+        <button data-sec="objection">Battlecards</button>
+      </nav>
+    </div>
+    <div class="menubar-right">
+      <button class="icon-btn" id="themeBtn" aria-label="Ganti tema" title="Ganti tema">
+        <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.5 5.5 0 0 1-7.54-7.54A9.1 9.1 0 0 0 12 3z"/></svg>
+      </button>
+      <span id="clock" class="clock"></span>
+    </div>
+  </header>
+
+  <main class="desktop">
+    <section class="window main-window" aria-label="Playbook">
+      <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+          <div class="traffic" aria-hidden="true"><i class="r"></i><i class="y"></i><i class="g"></i></div>
+          <span class="sheet-title mobile-only">Modul Playbook</span>
+          <button class="sheet-done mobile-only" id="drawerClose" aria-label="Tutup menu">Selesai</button>
+        </div>
+        <div class="side-group">
+          <h6>Modul Playbook</h6>
+          <ul id="moduleList"></ul>
+        </div>
+        <div class="side-group">
+          <h6>Buka Katalog Digital</h6>
+          <div class="ink-tags">
+            <a class="ink-tag" href="https://aris-projectai.github.io/epson-ecotank-catalog/" target="_blank" rel="noopener">🖨️ EcoTank (49)</a>
+            <a class="ink-tag" href="https://aris-projectai.github.io/epson-projector-catalog/" target="_blank" rel="noopener">📽️ Proyektor (21)</a>
+            <a class="ink-tag" href="https://aris-projectai.github.io/epson-tkdn-catalog/" target="_blank" rel="noopener">🏛️ TKDN &amp; PDN (79)</a>
+          </div>
+        </div>
+        <p class="side-foot">Panduan Strategis Sales, Presales &amp; Pengadaan Epson Indonesia (FY25/2026)</p>
+      </aside>
+
+      <div class="pane">
+        <!-- Apple.com chapter nav (mobile) -->
+        <nav class="chapternav mobile-only" id="chapterNav" aria-label="Modul Playbook"></nav>
+
+        <div class="toolbar">
+          <div class="traffic mobile-only" aria-hidden="true"><i class="r"></i><i class="y"></i><i class="g"></i></div>
+          <div class="title-block">
+            <h1 id="paneTitle">Asisten Rekomendasi &amp; Portal Katalog</h1>
+            <span id="paneSub" class="muted">Playbook Interaktif Epson</span>
+          </div>
+          <div class="toolbar-actions">
+            <button class="filter-pill mobile-only" id="filterBtn" aria-label="Menu Modul">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm3 5h10v2H7zm3 5h4v2h-4z"/></svg>
+              <span>Modul</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="hero" class="hero"></div>
+        <div id="playbookContent" class="pb-section" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="assets/data/products.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
