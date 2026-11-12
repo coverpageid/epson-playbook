@@ -22,13 +22,13 @@
   const svg = (k) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k] || ICON.wizard}</svg>`;
 
   const MODULES = [
-    { id: "wizard", short: "Rekomendasi", label: "Asisten Rekomendasi", desc: "Pilih profil pelanggan & kebutuhan untuk mendapatkan rekomendasi produk Terbaik, Ideal, dan Upsell dalam hitungan detik." },
-    { id: "ecotank", short: "EcoTank", label: "Playbook Printer EcoTank", desc: "Rumus membaca kode model 47 printer EcoTank aktif, matriks Upselling Ladder, dan panduan generasi baru 2026." },
-    { id: "ink", short: "Kode Tinta", label: "Panduan Kode Tinta", desc: "Pencarian cepat kompatibilitas botol tinta Epson (664, 003, 001, 008, 057, 005), formula Dye vs Pigmen, dan sertifikat TKDN." },
-    { id: "projector", short: "Proyektor", label: "Playbook Proyektor 3LCD", desc: "Panduan 21 proyektor Corporate & Education: kalkulator ukuran ruangan, kode seri EB-, dan keunggulan 3LCD vs DLP." },
-    { id: "tkdn", short: "Strategi TKDN", label: "Strategi Tender TKDN & PDN", desc: "Aturan pengadaan pemerintah (PP 29/2018), Cheat Sheet pemenang tender per kategori, & strategi mengalahkan fotokopi laser." },
-    { id: "certs", short: "Sertifikat", label: "Tabel 79 Sertifikat TKDN", desc: "Daftar lengkap Kode SKU, Nilai TKDN, Nilai BMP, Total, dan Nomor Sertifikat Kemenperin RI (Efektif 28 Agu 2026) siap salin." },
-    { id: "objection", short: "Battlecards", label: "Objection Handling & Battlecards", desc: "Jawaban siap pakai saat menghadapi keberatan harga, perbandingan melawan kompetitor Laser & DLP, serta tips closing." },
+    { id: "wizard", short: "Rekomendasi", label: "Asisten Rekomendasi", desc: "Pilih profil pelanggan & kebutuhan untuk mendapatkan rekomendasi produk Terbaik, Ideal dan Upsell dalam hitungan detik." },
+    { id: "ecotank", short: "EcoTank", label: "Playbook Printer EcoTank", desc: "Rumus membaca kode model 46 printer EcoTank aktif, matriks Upselling Ladder dan panduan generasi baru 2026." },
+    { id: "ink", short: "Kode Tinta", label: "Panduan Kode Tinta", desc: "Pencarian cepat kompatibilitas botol tinta Epson (664, 003, 001, 008, 057, 005), formula Dye vs Pigmen dan sertifikat TKDN." },
+    { id: "projector", short: "Proyektor", label: "Playbook Proyektor 3LCD", desc: "Panduan 21 proyektor Corporate & Education: kalkulator ukuran ruangan, kode seri EB- dan keunggulan 3LCD vs DLP." },
+    { id: "tkdn", short: "Strategi TKDN", label: "Strategi Tender TKDN & PDN", desc: "Aturan pengadaan pemerintah (PP 29/2018), Cheat Sheet pemenang tender per kategori & strategi mengalahkan fotokopi laser." },
+    { id: "certs", short: "Sertifikat", label: "Tabel 79 Sertifikat TKDN", desc: "Daftar lengkap Kode SKU, Nilai TKDN, Nilai BMP, Total dan Nomor Sertifikat Kemenperin RI (Efektif 28 Agu 2026) siap salin." },
+    { id: "objection", short: "Battlecards", label: "Objection Handling & Battlecards", desc: "Jawaban siap pakai saat menghadapi keberatan harga, perbandingan melawan kompetitor Laser & DLP serta tips closing." },
   ];
 
   /* ---------- Recommendation Wizard Data ---------- */
@@ -45,23 +45,23 @@
       title: "Printer UMKM & Kantor Sibuk (ADF, Duplex & Tinta Tahan Air)",
       tiers: [
         { tag: "Kantor Kecil (ADF)", color: "#6e6e73", model: "EcoTank L5391 / L5590", meta: "Tinta 003 · ADF 30 Lembar · Print/Scan/Copy/Fax · Wi-Fi & LAN", pitch: "Cocok untuk admin yang sering fotokopi/scan tumpukan dokumen lewat ADF serta butuh port kabel LAN.", url: `${URL_ECO}#/compare/L5391,L5590` },
-        { tag: "Pilihan Ideal (Duplex + ADF)", color: "#0a84ff", best: true, model: "EcoTank L6370 / L6390", meta: "Tinta 001 (Hitam Pigmen) · Auto Duplex · ADF · Baki 250 Lembar", pitch: "Kecepatan cetak tinggi 15 ipm, laci kertas tertutup bebas debu 250 lembar, dan teks hitam anti-luntur.", url: `${URL_ECO}#/compare/L6370,L6390` },
+        { tag: "Pilihan Ideal (Duplex + ADF)", color: "#0a84ff", best: true, model: "EcoTank L6370 / L6390", meta: "Tinta 001 (Hitam Pigmen) · Auto Duplex · ADF · Baki 250 Lembar", pitch: "Kecepatan cetak tinggi 15 ipm, laci kertas tertutup bebas debu 250 lembar dan teks hitam anti-luntur.", url: `${URL_ECO}#/compare/L6370,L6390` },
         { tag: "Upsell Bisnis (Full Pigmen)", color: "#30d158", model: "EcoTank L6460 / L6490", meta: "Tinta 008 (Full Pigmen 4 Warna) · PrecisionCore · 17 ipm", pitch: "Alasan Upsell: Semua 4 warna menggunakan tinta pigmen DURABrite ET — cetakan grafik & logo warna tidak luntur terkena stabilo/air!", url: `${URL_ECO}#/compare/L6460,L6490` },
       ]
     },
     "swasta:printer:a3": {
       title: "Printer Format Lebar A3+ (Arsitek, Konstruksi, Laporan Keuangan & Foto)",
       tiers: [
-        { tag: "Cetak A3+ Ekonomis", color: "#6e6e73", model: "EcoTank L11050 / L14150", meta: "L11050 (Tinta 003, Cetak A3+) · L14150 (Tinta 001, Scan A4 + Cetak A3+)", pitch: "Pilihan hemat untuk mencetak tabel Excel lebar, gambar CAD A3, atau poster.", url: `${URL_ECO}#/compare/L11050,L14150` },
-        { tag: "Pilihan Ideal (Full A3+ Bisnis)", color: "#0a84ff", best: true, model: "EcoTank L15150 / L15160", meta: "Tinta 008 (Full Pigmen) · Print/Scan/Copy/Duplex A3 Penuh · 25 ipm", pitch: "Bisa Scan, Copy, dan Duplex hingga ukuran A3 penuh dengan kecepatan tinggi 25 ipm dan tinta pigmen tahan air.", url: `${URL_ECO}#/compare/L15150,L15160` },
-        { tag: "Studio Foto / Kreator A3+", color: "#30d158", model: "EcoTank L18050 (Foto 6 Warna)", meta: "Tinta 057 (6 Warna Dye) · Cetak Foto A3+ & ID Card PVC", pitch: "Khusus fotografer, percetakan undangan, dan produksi ID Card PVC langsung tanpa mesin laminasi panas.", url: `${URL_ECO}#/compare/L8050,L8100,L18050` },
+        { tag: "Cetak A3+ Ekonomis", color: "#6e6e73", model: "EcoTank L11050 / L14150", meta: "L11050 (Tinta 003, Cetak A3+) · L14150 (Tinta 001, Scan A4 + Cetak A3+)", pitch: "Pilihan hemat untuk mencetak tabel Excel lebar, gambar CAD A3 atau poster.", url: `${URL_ECO}#/compare/L11050,L14150` },
+        { tag: "Pilihan Ideal (Full A3+ Bisnis)", color: "#0a84ff", best: true, model: "EcoTank L15150 / L15160", meta: "Tinta 008 (Full Pigmen) · Print/Scan/Copy/Duplex A3 Penuh · 25 ipm", pitch: "Bisa Scan, Copy dan Duplex hingga ukuran A3 penuh dengan kecepatan tinggi 25 ipm dan tinta pigmen tahan air.", url: `${URL_ECO}#/compare/L15150,L15160` },
+        { tag: "Studio Foto / Kreator A3+", color: "#30d158", model: "EcoTank L18050 (Foto 6 Warna)", meta: "Tinta 057 (6 Warna Dye) · Cetak Foto A3+ & ID Card PVC", pitch: "Khusus fotografer, percetakan undangan dan produksi ID Card PVC langsung tanpa mesin laminasi panas.", url: `${URL_ECO}#/compare/L8050,L8100,L18050` },
       ]
     },
     "swasta:printer:mono": {
       title: "Printer Monokrom Hitam-Putih (Pengganti Printer Laser untuk Kasir, Notaris & Logistik)",
       tiers: [
         { tag: "Cetak Saja Ringkas", color: "#6e6e73", model: "EcoTank M1050 / M1140", meta: "Tinta Pigmen 005 (6.000 hal.) · M1050 (Wi-Fi/LAN) · M1140 (Duplex)", pitch: "Biaya cetak per lembar jauh lebih murah dari toner laser dan konsumsi listrik hanya ~14 Watt (bisa pakai UPS kecil).", url: `${URL_ECO}#/compare/M1050,M1140` },
-        { tag: "Pilihan Ideal (Mono All-in-One)", color: "#0a84ff", best: true, model: "EcoTank M2050 / M2140", meta: "Tinta Pigmen 005 · Print/Scan/Copy · ADF (M2050) / Duplex (M2140)", pitch: "All-in-One hitam-putih super tangguh untuk kantor notaris, klinik, dan ekspedisi.", url: `${URL_ECO}#/compare/M2050,M2140` },
+        { tag: "Pilihan Ideal (Mono All-in-One)", color: "#0a84ff", best: true, model: "EcoTank M2050 / M2140", meta: "Tinta Pigmen 005 · Print/Scan/Copy · ADF (M2050) / Duplex (M2140)", pitch: "All-in-One hitam-putih super tangguh untuk kantor notaris, klinik dan ekspedisi.", url: `${URL_ECO}#/compare/M2050,M2140` },
         { tag: "Upsell Mono Lengkap / A3", color: "#30d158", model: "EcoTank M3170 / M15140 (A3)", meta: "M3170 (A4 ADF+Duplex+Fax) · M15140 (Full A3+ Mono 25 ipm)", pitch: "Alasan Upsell: M3170 punya paket komplit A4 (ADF+Duplex+Wi-Fi), sedangkan M15140 mendukung cetak & scan A3 penuh!", url: `${URL_ECO}#/compare/M3170,M15140` },
       ]
     },
@@ -100,8 +100,8 @@
     "tkdn:spec:all": {
       title: "Pengadaan Plotter CAD/GIS, Dot Matrix, Passbook & Label TKDN/PDN",
       tiers: [
-        { tag: "Dot Matrix & Passbook Bank", color: "#6e6e73", model: "LQ-2190 (40,54%) / LQ-310 (38,99%) / PLQ-35 (35,78%)", meta: "Cert: 1271/..4/2024 (LQ/LX) & 974/..3/2024 (PLQ-35/50)", pitch: "Untuk cetak faktur rangkap, pajak, koperasi, dan buku tabungan perbankan.", url: `${URL_TKDN}#/compare/LQ-310,LQ-2190,PLQ-35,PLQ-50` },
-        { tag: "Plotter Teknis 24\"–44\" (TKDN & PDN)", color: "#0a84ff", best: true, model: "SC-T3130 (38,94%) / SC-T5130M (39,84%) / SC-T3730D (PDN)", meta: "Cert: 976 & 977/..3/2024 · Tersedia Plotter+Scanner (M) & Dual Roll 6-Warna (PDN)", pitch: "Wajib untuk Dinas PU, BPN, BUMN Karya, dan Fakultas Teknik.", url: `${URL_TKDN}#/compare/SC-T3130,SC-T3130M,SC-T5130M,SC-T5435` },
+        { tag: "Dot Matrix & Passbook Bank", color: "#6e6e73", model: "LQ-2190 (40,54%) / LQ-310 (38,99%) / PLQ-35 (35,78%)", meta: "Cert: 1271/..4/2024 (LQ/LX) & 974/..3/2024 (PLQ-35/50)", pitch: "Untuk cetak faktur rangkap, pajak, koperasi dan buku tabungan perbankan.", url: `${URL_TKDN}#/compare/LQ-310,LQ-2190,PLQ-35,PLQ-50` },
+        { tag: "Plotter Teknis 24\"–44\" (TKDN & PDN)", color: "#0a84ff", best: true, model: "SC-T3130 (38,94%) / SC-T5130M (39,84%) / SC-T3730D (PDN)", meta: "Cert: 976 & 977/..3/2024 · Tersedia Plotter+Scanner (M) & Dual Roll 6-Warna (PDN)", pitch: "Wajib untuk Dinas PU, BPN, BUMN Karya dan Fakultas Teknik.", url: `${URL_TKDN}#/compare/SC-T3130,SC-T3130M,SC-T5130M,SC-T5435` },
         { tag: "Label Industri & Sublimasi SMK", color: "#30d158", model: "CW-C6050P (29,88%) & SC-F531 (37,37%)", meta: "ColorWorks Label 4\"/8\" (Cert 979) · SureColor Sublimasi 24\" (Cert 1068)", pitch: "CW-C6050/6550 untuk label farmasi/RS/logistik; SC-F530/F531 untuk BLK & SMK Kreatif.", url: `${URL_TKDN}#/compare/CW-C6050A,CW-C6050P,SC-F530,SC-F531` },
       ]
     }
@@ -170,7 +170,7 @@
     } else if (m.startsWith("L")) {
       parts.push({ code: "L", label: "Seri EcoTank Warna", desc: "Tangki tinta warna terintegrasi bebas repot isi ulang." });
     } else {
-      parts.push({ code: m || "?", label: "Format Seri", desc: "Ketik model seperti L3251, L4360, L15150, atau M15140." });
+      parts.push({ code: m || "?", label: "Format Seri", desc: "Ketik model seperti L3251, L4360, L15150 atau M15140." });
       return parts;
     }
     const digits = m.slice(1);
@@ -238,7 +238,7 @@
     return `
       <div class="portal-grid">
         <a class="portal-item" href="${URL_ECO}" target="_blank" rel="noopener">
-          <span class="portal-badge" style="background:linear-gradient(135deg,#0a84ff,#0051a8)">47 Model Printer</span>
+          <span class="portal-badge" style="background:linear-gradient(135deg,#0a84ff,#0051a8)">46 Model Printer</span>
           <h4>Katalog Digital Epson EcoTank</h4>
           <p>Seluruh printer Ink Tank rumah, kantor, foto 6 warna, monokrom, hingga A3+ lengkap dengan filter kode tinta & perbandingan.</p>
           <span class="portal-cta">Buka Katalog EcoTank →</span>
@@ -259,7 +259,7 @@
 
       <div class="pb-card">
         <h3>${svg("wizard")} Asisten Rekomendasi Cepat (Pilih Skenario Pelanggan)</h3>
-        <p class="sub">Klik salah satu kebutuhan pelanggan di bawah ini untuk melihat rekomendasi berjenjang (Ekonomis, Ideal, & Upsell) beserta argumen penjualannya:</p>
+        <p class="sub">Klik salah satu kebutuhan pelanggan di bawah ini untuk melihat rekomendasi berjenjang (Ekonomis, Ideal & Upsell) beserta argumen penjualannya:</p>
         <div class="wiz-pills" style="margin-bottom:18px">
           ${scenarios.map(([k, lbl]) => `<button class="wiz-btn ${state.wizKey === k ? "active" : ""}" data-wiz="${k}">${lbl}</button>`).join("")}
         </div>
@@ -296,8 +296,8 @@
       </div>
 
       <div class="pb-card">
-        <h3>⚠️ Status Discontinue &amp; Belum TKDN/PDN (L120, L1210, L3210, L3250)</h3>
-        <p class="sub">Tipe <b>L120, L1210, L3210, dan L3250</b> sudah <b>Discontinue</b> serta <b>belum berstatus TKDN/PDN</b>. Arahkan permintaan pelanggan ke pengganti resminya:</p>
+        <h3>⚠️ Status Discontinue &amp; Belum TKDN/PDN (L120, L1210, L1250, L3210 dan L3250)</h3>
+        <p class="sub">Tipe <b>L120, L1210, L1250, L3210 dan L3250</b> sudah <b>Discontinue</b> serta <b>belum berstatus TKDN/PDN</b>. Arahkan permintaan pelanggan ke pengganti resminya:</p>
         <div class="tier-grid">
           <div class="tier-box best">
             <span class="tier-tag" style="background:#d7001522;color:#d70015">Pengganti Resmi Bersertifikat TKDN</span>
@@ -307,9 +307,9 @@
           </div>
           <div class="tier-box best">
             <span class="tier-tag" style="background:#0a84ff22;color:#0a84ff">Pengganti Generasi Baru 2026 &amp; Single-Function</span>
-            <h4>L121 · L1310 · L3311 · L3351</h4>
-            <div class="tier-meta">L121 (Pengganti L120) · L1310 (Pengganti L1210) · L3311/L3351 (Generasi Baru)</div>
-            <p class="pitch">Untuk kebutuhan cetak saja arahkan L120 ke <b>L121</b> dan L1210 ke <b>L1310 / L1250</b>; untuk All-in-One ritel arahkan ke <b>L3311 / L3351</b>.</p>
+            <h4>L121 · L1310 · L1350 · L3311 · L3351</h4>
+            <div class="tier-meta">L121 (Pengganti L120) · L1310 (Pengganti L1210) · L1350 (Pengganti L1250)</div>
+            <p class="pitch">Untuk cetak saja arahkan L120 ke <b>L121</b>, L1210 ke <b>L1310</b> dan L1250 ke <b>L1350</b> (Wi-Fi); untuk All-in-One ritel arahkan ke <b>L3311 / L3351</b>.</p>
           </div>
         </div>
       </div>
@@ -371,7 +371,7 @@
 
       <div class="pb-card">
         <h3>🆕 Daftar 12 Model Baru EcoTank Generasi 2026</h3>
-        <p class="sub">Model generasi terbaru dengan sasis lebih ringkas, kecepatan meningkat, dan akses perawatan mudah:</p>
+        <p class="sub">Model generasi terbaru dengan sasis lebih ringkas, kecepatan meningkat dan akses perawatan mudah:</p>
         <div class="pills">
           ${["L1310", "L1350", "L3311", "L3316", "L3351", "L3356", "L4360", "L5391", "L6370", "L6390", "M1050", "M2050"]
             .map((m) => `<a class="pill blue" style="padding:6px 12px;font-size:13px" href="${URL_ECO}#/p/${m}" target="_blank" rel="noopener">${m} ↗</a>`).join("")}
@@ -381,7 +381,7 @@
 
   function renderInk() {
     const inks = [
-      { code: "003", type: "Dye 4 Warna (CMYK) · Botol Anti-Tumpah Key-Lock", yield: "4.500 hal. Hitam / 7.500 hal. Warna (65 ml)", tkdn: "Bersertifikat TKDN Mei 2026: Bk 25,65% (4000) · C 25,25% (4004) · M 25,72% (4005) · Y 25,54% (4006)", models: "L11050, L1250, L1256, L1310, L1350, L3211, L3216, L3251, L3256, L3311, L3316, L3351, L3356, L3550, L3556, L5290, L5296, L5391, L5590" },
+      { code: "003", type: "Dye 4 Warna (CMYK) · Botol Anti-Tumpah Key-Lock", yield: "4.500 hal. Hitam / 7.500 hal. Warna (65 ml)", tkdn: "Bersertifikat TKDN Mei 2026: Bk 25,65% (4000) · C 25,25% (4004) · M 25,72% (4005) · Y 25,54% (4006)", models: "L11050, L1256, L1310, L1350, L3211, L3216, L3251, L3256, L3311, L3316, L3351, L3356, L3550, L3556, L5290, L5296, L5391, L5590" },
       { code: "664", type: "Dye 4 Warna (CMYK) · Botol Standar 70 ml", yield: "4.000 hal. Hitam / 6.500 hal. Warna (70 ml)", tkdn: "Bersertifikat TKDN Mei 2026: T6641 Bk 25,23% (3999) · T6642 C 25,25% (4003) · T6643 M 25,27% (4001) · T6644 Y 25,20% (4002)", models: "L121" },
       { code: "001", type: "Hitam Pigmen (127 ml) + Warna Dye CMY (70 ml)", yield: "7.500 hal. Hitam / 6.000 hal. Warna", tkdn: "—", models: "L4360, L6260, L6370, L6390, L14150" },
       { code: "008", type: "Full Pigmen 4 Warna DURABrite ET (Tahan Air & Stabilo)", yield: "7.500 hal. Hitam (127 ml) / 6.000 hal. Warna (70 ml)", tkdn: "—", models: "L6460, L6490, L6550, L6580, L15150, L15160, L15180" },
@@ -422,7 +422,7 @@
     return `
       <div class="pb-card">
         <h3>📽️ Matriks Pemilihan Proyektor 3LCD Berdasarkan Ukuran Ruangan</h3>
-        <p class="sub">Gunakan tabel ini untuk menentukan tingkat kecerahan (Lumens), resolusi, dan fitur yang tepat bagi klien:</p>
+        <p class="sub">Gunakan tabel ini untuk menentukan tingkat kecerahan (Lumens), resolusi dan fitur yang tepat bagi klien:</p>
         <div class="pb-table-wrap">
           <table class="pb-table">
             <thead>
@@ -489,7 +489,7 @@
             <span class="tier-tag" style="background:#0a84ff22;color:#0a84ff">Pengganti TKDN + LAN / Wi-Fi</span>
             <h4>Epson EB-X600 (TKDN 55,02%)</h4>
             <div class="tier-meta">SKU: V11H982055 · Cert: 8509/SJ-IND.8/E-TKDN/9/2024</div>
-            <p class="pitch">3.600 Lumens XGA, Kontras 16.000:1, dilengkapi port jaringan RJ45 LAN, Auto Vertical Keystone, & dukungan Wi-Fi opsional ELPAP11.</p>
+            <p class="pitch">3.600 Lumens XGA, Kontras 16.000:1, dilengkapi port jaringan RJ45 LAN, Auto Vertical Keystone & dukungan Wi-Fi opsional ELPAP11.</p>
           </div>
         </div>
       </div>`;
@@ -588,7 +588,7 @@
                 <td><b>LQ-2190</b> / <b>LQ-310</b> / <b>PLQ-35</b> / <b>PLQ-50</b></td>
                 <td><b style="color:#0a84ff">40,54% / 38,99% / 35,78% / 35,25%</b></td>
                 <td><code>1271/.../4/2024</code> &amp; <code>974/.../3/2024</code></td>
-                <td>Standar mutlak administrasi keuangan, pajak, dan buku tabungan bank.</td>
+                <td>Standar mutlak administrasi keuangan, pajak dan buku tabungan bank.</td>
               </tr>
               <tr>
                 <td><b>Plotter CAD/GIS &amp; Sublimasi</b></td>
@@ -664,19 +664,19 @@
     const cards = [
       {
         q: "1. \"Kenapa kami harus pindah dari Printer/Fotokopi Laser ke Epson Bisnis Inkjet (EcoTank / WorkForce)?\"",
-        a: "<b>Teknologi PrecisionCore Heat-Free Epson tidak membutuhkan pemanas fuser (tidak seperti laser yang menyedot 400–1.500 Watt).</b> Konsumsi listrik Epson hingga <b>85% lebih hemat</b> (cukup 12–50 Watt, bahkan bisa di-backup UPS kecil), komponen aus jauh lebih sedikit, waktu keluar halaman pertama lebih cepat karena tanpa pemanasan, dan tinta pigmen DURABrite ET/005/008 sama-sama 100% tahan air!"
+        a: "<b>Teknologi PrecisionCore Heat-Free Epson tidak membutuhkan pemanas fuser (tidak seperti laser yang menyedot 400–1.500 Watt).</b> Konsumsi listrik Epson hingga <b>85% lebih hemat</b> (cukup 12–50 Watt, bahkan bisa di-backup UPS kecil), komponen aus jauh lebih sedikit, waktu keluar halaman pertama lebih cepat karena tanpa pemanasan dan tinta pigmen DURABrite ET/005/008 sama-sama 100% tahan air!"
       },
       {
         q: "2. \"Proyektor merek DLP kompetitor harganya sedikit lebih murah dengan klaim lumens yang sama. Apa bedanya?\"",
-        a: "<b>Perhatikan Colour Brightness (Kecerahan Warna)!</b> Proyektor 1-chip DLP menggunakan roda warna berputar sehingga kecerahan warnanya sering turun drastis dibanding kecerahan putihnya, serta menimbulkan efek pelangi (<i>Rainbow Effect</i>) yang membuat mata lelah. Proyektor <b>Epson 3LCD menghasilkan 100% Colour Brightness = White Brightness</b> (warna hingga 3× lebih cerah & hidup) dan bebas efek pelangi."
+        a: "<b>Perhatikan Colour Brightness (Kecerahan Warna)!</b> Proyektor 1-chip DLP menggunakan roda warna berputar sehingga kecerahan warnanya sering turun drastis dibanding kecerahan putihnya serta menimbulkan efek pelangi (<i>Rainbow Effect</i>) yang membuat mata lelah. Proyektor <b>Epson 3LCD menghasilkan 100% Colour Brightness = White Brightness</b> (warna hingga 3× lebih cerah & hidup) dan bebas efek pelangi."
       },
       {
         q: "3. \"Kalau printer Ink Tank jarang dipakai, apakah head-nya mudah mampet?\"",
         a: "Epson menggunakan printhead permanen <b>Micro Piezo / PrecisionCore</b> yang bekerja secara mekanis (tanpa memanaskan tinta sampai mendidih seperti thermal inkjet merek lain). Selama menggunakan tinta orisinal Epson dan dinyalakan secara berkala, printhead sangat awet dan dilindungi <b>garansi resmi hingga 2 tahun (+1 tahun via MyEpson Portal) atau 30.000–50.000 halaman</b>."
       },
       {
-        q: "4. \"Pelanggan mencari L3210, L3250, L120, atau L1210 untuk pengadaan / pembelian baru?\"",
-        a: "<b>Tipe L3210, L3250, L120, dan L1210 sudah Discontinue serta belum berstatus TKDN/PDN.</b> Arahkan langsung ke pengganti resminya: <b>L3211 (TKDN+BMP 66,45%)</b> dan <b>L3251 (TKDN+BMP 75,28%)</b> dengan Sertifikat <code>6109/SJ-IND.8/E-TKDN/5/2025</code>, atau model generasi baru 2026 <b>L3311 / L3351</b> serta <b>L121 / L1310</b> untuk cetak saja."
+        q: "4. \"Pelanggan mencari L3210, L3250, L120, L1210 atau L1250 untuk pengadaan / pembelian baru?\"",
+        a: "<b>Tipe L3210, L3250, L120, L1210 dan L1250 sudah Discontinue serta belum berstatus TKDN/PDN.</b> Arahkan langsung ke pengganti resminya: <b>L3211 (TKDN+BMP 66,45%)</b> dan <b>L3251 (TKDN+BMP 75,28%)</b> dengan Sertifikat <code>6109/SJ-IND.8/E-TKDN/5/2025</code> atau model generasi baru 2026 <b>L3311 / L3351</b> (All-in-One) serta <b>L121 / L1310 / L1350</b> untuk cetak saja."
       },
       {
         q: "5. \"Klien mencari Proyektor EB-X500 untuk pengadaan sekolah/dinas, tapi barangnya kosong?\"",
@@ -684,7 +684,7 @@
       },
       {
         q: "6. \"Kapan harus menawarkan Proyektor Laser (EB-L210W / L260F) dibanding proyektor lampu biasa?\"",
-        a: "Jika proyektor dipakai setiap hari lebih dari 4–6 jam (ruang kuliah, ruang rapat utama, lobby/signage, atau dipasang tinggi di plafon aula). Sumber cahaya Laser bertahan <b>20.000 jam bebas ganti lampu</b>, menyala instan dalam hitungan detik, dan sudah dilengkapi <b>Wi-Fi Built-in + Screen Mirroring + Speaker 16W</b>."
+        a: "Jika proyektor dipakai setiap hari lebih dari 4–6 jam (ruang kuliah, ruang rapat utama, lobby/signage atau dipasang tinggi di plafon aula). Sumber cahaya Laser bertahan <b>20.000 jam bebas ganti lampu</b>, menyala instan dalam hitungan detik dan sudah dilengkapi <b>Wi-Fi Built-in + Screen Mirroring + Speaker 16W</b>."
       },
     ];
     return `

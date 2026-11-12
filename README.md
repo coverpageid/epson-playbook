@@ -1,6 +1,6 @@
 # Epson Sales & Product Playbook (Web App Mandiri)
 
-Aplikasi web interaktif bergaya macOS / Apple.com untuk tim Sales, Presales, dan Pengadaan produk Epson Indonesia:
+Aplikasi web interaktif bergaya macOS / Apple.com untuk tim Sales, Presales dan Pengadaan produk Epson Indonesia:
 - **Asisten Rekomendasi Cepat (3 Tier: Ekonomis, Ideal, Upsell)**
 - **Dekoder Interaktif Kode Model EcoTank**
 - **Panduan & Kompatibilitas Kode Tinta (`664`, `003`, `001`, `008`, `057`, `005`)**
