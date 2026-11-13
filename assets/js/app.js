@@ -6,9 +6,9 @@
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  const URL_ECO  = "https://aris-projectai.github.io/epson-ecotank-catalog/";
-  const URL_PROJ = "https://aris-projectai.github.io/epson-projector-catalog/";
-  const URL_TKDN = "https://aris-projectai.github.io/epson-tkdn-catalog/";
+  const URL_ECO  = "https://coverpageid.github.io/epson-ecotank-catalog/";
+  const URL_PROJ = "https://coverpageid.github.io/epson-projector-catalog/";
+  const URL_TKDN = "https://coverpageid.github.io/epson-tkdn-catalog/";
 
   const ICON = {
     wizard: '<path d="M12 2l2.4 5.6L20 10l-5.6 2.4L12 18l-2.4-5.6L4 10l5.6-2.4L12 2zm6 13l1 2.5L21.5 18.5 19 19.5 18 22l-1-2.5-2.5-1 2.5-1L18 15z"/>',
